@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <div class="order">
+            <form name="order">
+                <h2>КУПИТЬ</h2>
+                <label> Выберіті тавар:
+                    <select name="tovars">
+                        <option value="empty">Выбіріті тавар</option> 
+                        <option value="1" data-price="11.2">Кросовкі</option>
+                        <option value="2" data-price="40">Штани</option>
+                        <option value="3" data-price="3.31">Носкі</option>
+                    </select>
+                </label>
+                <label> Сколька нада?
+                    <input name="items-number" value="1" type="number" min="1" max="99">
+                </label>
+                <div class="delivery">
+                    <p>Тіп даставкі:</p>
+                    <label> 
+                        <input type="radio" name="delivery" value="1" data-price="30">
+                        Железная птица
+                    </label>  
+                    <label>                        
+                        <input type="radio" name="delivery" value="2" data-price="10">
+                        Осёл
+                    </label>
+                    <label>                       
+                        <input type="radio" name="delivery" value="3" data-price="0" checked>
+                        Заберу сам
+                    </label>
+                </div>
+                <p>Цена: <span id="price">0</span> грв.</p>
+                <input type="submit" value="Отправіть">
+                <input type="reset" value="Я передумал">
+            </form>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>
